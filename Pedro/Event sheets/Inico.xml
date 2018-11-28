@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Inico</name>
+    <events>
+        <variable constant="0" name="direita" sid="361248538196194" static="0" type="number">0</variable>
+        <variable constant="0" name="tempPontos" sid="425349505480380" static="0" type="number">0</variable>
+        <variable constant="0" name="elevadorgrapple" sid="161194867456811" static="0" type="number">0</variable>
+        <event-block sid="547891774822638">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="535936267376081" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="3" name="Set deceleration" sid="546451862906491" type="midoriya">
+                    <param id="0" name="Deceleration">800</param>
+                </action>
+                <action id="0" name="Play" sid="324589917897544" type="Audio">
+                    <param id="0" name="Audio file">bgMusic</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;bgMusic&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="475510588022762" title="IntroVid">
+            <sub-events>
+                <event-block sid="949125584229293">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="218694402035987" type="midoriya" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="254457011748006">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="451832823875618" type="System">
+                                    <param id="0" name="Variable">direita</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="654096841442018" type="midoriya">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="244984141201661" type="midoriya">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="305978514538446">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="514528906533133" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="864585076159550" type="midoriya">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="469261072492774" type="midoriya">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="526632558341501">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="739138231457694" type="midoriya">
+                            <param id="0" name="Object">trigInto1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="681061984561543" type="midoriya">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="113357182206116">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="918016445217675" type="midoriya">
+                            <param id="0" name="Object">trigInto2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="673628517903183" type="System">
+                            <param id="0" name="Variable">direita</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="971494466373573">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="139324318570147" type="midoriya">
+                            <param id="0" name="Object">trigInto3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="731087343322472" type="System">
+                            <param id="0" name="Variable">direita</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="773203168825283">
+            <conditions>
+                <condition id="14" name="On tap" sid="988745673243582" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="911776655205062" type="System">
+                    <param id="0" name="Layout">fase 1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

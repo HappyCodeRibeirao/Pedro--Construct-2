@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="1">Início</layout>
+        <layout order="3">fase 1</layout>
+        <layout order="4">fase 2</layout>
+        <layout order="5">fase 3</layout>
+        <layout order="6">Game Over</layout>
+        <event-sheet active="1" order="0">EventSheet</event-sheet>
+        <event-sheet order="2">Inico</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="object-folder/Bg/" />
+        <folder expanded="0" path="object-folder/platform/" />
+        <folder expanded="1" path="object-folder/objetos/" />
+        <folder expanded="1" path="object-folder/Text/" />
+        <folder expanded="0" path="object-folder/triggers/" />
+        <folder expanded="1" path="object-folder/Gui/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="0" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="0" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/porta/" />
+        <folder expanded="1" path="animation-folder/porta2/" />
+        <folder expanded="1" path="animation-folder/parededomidoriya/" />
+        <folder expanded="1" path="animation-folder/parededomidoriya2/" />
+        <folder expanded="1" path="animation-folder/midoriya/" />
+        <folder expanded="1" path="animation-folder/gancho/" />
+        <folder expanded="1" path="animation-folder/corda/" />
+        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/quadradamortetramontina/" />
+        <folder expanded="1" path="animation-folder/quadradamortetramontina2/" />
+        <folder expanded="1" path="animation-folder/caixaGrapple/" />
+        <folder expanded="1" path="animation-folder/pendulum/" />
+        <folder expanded="1" path="animation-folder/caixaElevador/" />
+        <folder expanded="1" path="animation-folder/bonus/" />
+        <folder expanded="1" path="animation-folder/trigInto1/" />
+        <folder expanded="1" path="animation-folder/trigInto2/" />
+        <folder expanded="1" path="animation-folder/trigInto3/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Sprite9/" />
+        <folder expanded="1" path="animation-folder/armaDoMidoriya/" />
+        <folder expanded="1" path="animation-folder/target/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/green_button/" />
+    </folders-expanded>
+</c2uistate>

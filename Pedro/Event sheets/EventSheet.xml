@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventSheet</name>
+    <events>
+        <event-block sid="183041159243082">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="887199740585096" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Entrance Transition" sid="941937351160708" type="LayoutTransition">
+                    <param id="0" name="Transition">6</param>
+                    <param id="1" name="Duration">1</param>
+                    <param id="2" name="Delay">0.5</param>
+                </action>
+                <action id="0" name="Set text" sid="313689449987281" type="pontos">
+                    <param id="0" name="Text">60</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="810423497074774">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="245600696014708" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="630111657990126" type="pontos">
+                    <param id="0" name="Text">int(pontos.Text)-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="147084060635246" title="Inimgos">
+            <sub-events>
+                <event-block sid="185240221520086">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="267573432381262" type="quadradamortetramontina">
+                            <param id="0" name="Object">midoriya</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="326080843091668" type="midoriya" />
+                        <action id="-26" name="Restart layout" sid="600742915486376" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="146546292951220">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="855684543331345" type="quadradamortetramontina2">
+                            <param id="0" name="Object">midoriya</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="672862112619132" type="midoriya" />
+                        <action id="-26" name="Restart layout" sid="550690022166667" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="665140070238330" title="Movimento">
+            <sub-events>
+                <event-block sid="959435526816341">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="213262620155415" type="porta">
+                            <param id="0" name="Object">midoriya</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-43" name="Go to next/previous layout" sid="587094546140807" type="System">
+                            <param id="0" name="Which">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="635851164527991">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="398201345542539" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="238855054858998" type="midoriya">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="281884532749734">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="999251001450752" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="808734602961893" type="midoriya">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="771715831681588">
+                    <conditions>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="337861380144680" type="midoriya" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="948820653560359" type="midoriya">
+                            <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="596478270103941">
+                    <conditions>
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="428125847333837" type="midoriya" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="722179541431690" type="midoriya">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="906446442898963" title="Grapple">
+                    <sub-events>
+                        <event-block sid="683612022475180">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="939353506871459" type="midoriya">
+                                    <param id="0" name="Object">pendulum</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="863758923016465" type="System">
+                                    <param id="0" name="Variable">elevadorgrapple</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="150736483992598" type="midoriya">
+                                    <param id="0" name="Vector Y">-90</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="627190858519960">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="426205445425284" type="midoriya">
+                                    <param id="0" name="Object">caixaElevador</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="533713723039585" type="System">
+                                    <param id="0" name="Variable">elevadorgrapple</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="910731950017196" type="midoriya">
+                                    <param id="0" name="Y">(caixaElevador.Y-midoriya.Height/2)-100</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="947470555190557" type="System">
+                                    <param id="0" name="Variable">elevadorgrapple</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Platform" id="5" name="Set gravity" sid="175424968607742" type="midoriya">
+                                    <param id="0" name="Gravity">2000</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="574247921713638" type="midoriya">
+                                    <param id="0" name="Vector Y">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="545566683956393" type="pendulum">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="232438243163193">
+                            <conditions>
+                                <condition id="16" name="On hold over object" sid="300440899651196" type="Touch">
+                                    <param id="0" name="Object">caixaGrapple</param>
+                                </condition>
+                                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="872335738753184" type="midoriya" />
+                                <condition id="-8" name="Compare two values" sid="452025192969727" type="System">
+                                    <param id="0" name="First value">abs(midoriya.X-caixaGrapple.X)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">300</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="855319657706885" type="pendulum">
+                                    <param id="0" name="Object">caixaGrapple</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="647301235471777" type="corda">
+                                    <param id="0" name="Object">pendulum</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-22" name="Set angle toward position" sid="437587806943384" type="corda">
+                                    <param id="0" name="X">midoriya.X</param>
+                                    <param id="1" name="Y">midoriya.Y</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="845544248600308" type="pendulum">
+                                    <param id="0" name="Height">distance(midoriya.X,midoriya.Y,pendulum.X,pendulum.Y)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="821352448239054">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="480999477985579" type="corda">
+                                            <param id="0" name="First angle">270</param>
+                                            <param id="1" name="Second angle">360</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="2" name="Set magnitude" sid="164397931349719" type="pendulum">
+                                            <param id="0" name="Magnitude">corda.Angle-400</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="370422517695631">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="295581013692666" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="2" name="Set magnitude" sid="702724369302522" type="pendulum">
+                                            <param id="0" name="Magnitude">corda.Angle-70</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="920093403985611">
+                                    <conditions />
+                                    <actions>
+                                        <action behavior="Sine" id="5" name="Set cycle position" sid="322665027290398" type="pendulum">
+                                            <param id="0" name="Cycle position">0.25</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="576516156581856" type="pendulum">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="234800374310861" type="System">
+                                            <param id="0" name="Seconds">0.05</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="843866857345829" type="midoriya">
+                                            <param id="0" name="Object">pendulum</param>
+                                            <param id="1" name="Image point (optional)">1</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="616078744634379" type="midoriya">
+                                            <param id="0" name="Pin to">pendulum</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="634141601296578" type="pendulum">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="470954936066067">
+                            <conditions>
+                                <condition id="14" name="On tap" sid="437217094656632" type="Touch" />
+                                <condition behavior="Pin" id="0" name="Is pinned" sid="420244037070805" type="midoriya" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="1" name="Unpin" sid="276238034560543" type="midoriya" />
+                                <action id="-15" name="Set visible" sid="977746301483842" type="pendulum">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="451772437391248" type="pendulum">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="232943914849172">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="377080129681049" type="midoriya">
+                                            <param id="0" name="Object">parededomidoriya</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="601188107280717" type="midoriya">
+                                            <param id="0" name="Y">parededomidoriya.Y-midoriya.Height/2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="975048660661213">
+                                    <conditions>
+                                        <condition behavior="Sine" id="3" name="Compare magnitude" sid="213458068991188" type="pendulum">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="919124106346103" type="midoriya">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="542925135793598">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="741924351169454" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="390610830077902" type="midoriya">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="309112397580846">
+                            <conditions>
+                                <condition id="16" name="On hold over object" sid="515423257917181" type="Touch">
+                                    <param id="0" name="Object">caixaElevador</param>
+                                </condition>
+                                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="381798955644228" type="midoriya" />
+                                <condition id="-8" name="Compare two values" sid="637871229976450" type="System">
+                                    <param id="0" name="First value">abs(midoriya.Y-caixaElevador.Y)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">300</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="466819665088436" type="System">
+                                    <param id="0" name="First value">abs(midoriya.X-caixaElevador.X)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="256323349532679" type="pendulum">
+                                    <param id="0" name="Object">caixaElevador</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="557324222786386" type="pendulum">
+                                    <param id="0" name="Height">distance(midoriya.X,midoriya.Y,pendulum.X,pendulum.Y)+20</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="229325022756478" type="pendulum">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action behavior="Platform" id="5" name="Set gravity" sid="275427159098695" type="midoriya">
+                                    <param id="0" name="Gravity">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="126265258073030" type="midoriya">
+                                    <param id="0" name="Vector Y">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="880352042593051" type="System">
+                                    <param id="0" name="Variable">elevadorgrapple</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="390252697080579" type="pendulum">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="887827921969565" type="pendulum">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="706361275706935" title="Objetos">
+            <sub-events>
+                <event-block sid="307325719792956">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="549631006460434" type="midoriya">
+                            <param id="0" name="Object">bonus</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="434152465565783" type="pontos">
+                            <param id="0" name="Text">60</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="906281946647847" type="bonus" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
